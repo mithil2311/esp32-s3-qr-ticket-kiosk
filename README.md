@@ -14,6 +14,16 @@ Project verification and measured results are in [docs/verification.md](docs/ver
 
 No QEMU result measures real ESP32 CPU speed, scanner optics/FPS, physical printer completion, Wi-Fi, USB Host, Bluetooth, GPIO drive or electrical behavior.
 
+## Graphical simulator
+
+```bash
+.venv/bin/python simulator/dashboard.py --port 8080
+```
+
+Open **http://127.0.0.1:8080** to see the scanner, ESP32-S3 controller, indicators, virtual printer receipt, live activity and firmware telemetry. The controls inject actual UART1 bytes into the QEMU guest and apply real backend/printer test faults. **Restart guest** retains NVS and reservations; uncertain printing requires operator reconciliation.
+
+The launcher starts its own isolated backend and QEMU session, so ports 9000 and 5556 must be free. This is a local graphical interface around the running firmware, with mocked peripherals. It does not emulate an LCD, scanner optics or physical GPIO/printer behavior. See [graphical simulator instructions and executed checks](docs/graphical-simulation.md).
+
 ## Ubuntu installation
 
 Tested here on Ubuntu 26.04.1 x86_64, Python 3.14.4, GCC 15.2.0, ESP-IDF **v5.5.1**, and Espressif QEMU **9.2.2 / esp_develop_9.2.2_20260417**. Standard Ubuntu 22.04/24.04 prerequisites can be installed with:
@@ -173,7 +183,7 @@ The supplied scanner pin labels are interpreted from the **scanner** perspective
 - `qr_scanner`, `backend_client`, `printer`, `transaction_journal`, `platform_hal`, `indicators`: small interfaces, formatters and platform adapters.
 - `host_tests/host_main.cpp`: POSIX HTTP, file journal and JSONL native runtime.
 - `host_tests/test_integration.py`: asserted end-to-end functional and fault tests.
-- `simulator/`: scanner byte injector, FastAPI/SQLite backend, virtual ESC/POS printer and fault controls.
+- `simulator/`: scanner byte injector, FastAPI/SQLite backend, virtual ESC/POS printer, fault controls, and the local graphical QEMU dashboard.
 - `scripts/`: prerequisites, installs, builds, host/QEMU tests, launch and benchmarks.
 - `docs/`: architecture, hardware checklist, benchmark and verification reports.
 - `vendor/`: upstream cJSON v1.7.19 for host; firmware uses ESP-IDF's cJSON component. MIT license retained.

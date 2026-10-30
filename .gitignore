@@ -35,3 +35,7 @@ results/qemu/*
 !results/qemu/uart1-runtime.log
 !results/qemu/nvs-power-recovery.log
 !results/qemu-tests.log
+
+# Executed graphical-adapter verification
+!results/gui-regression.log
+!results/gui-runtime-checks.json

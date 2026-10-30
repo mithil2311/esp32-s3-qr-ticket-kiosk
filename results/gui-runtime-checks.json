@@ -1,0 +1,35 @@
+{
+  "domain": "qemu_xtensa_firmware",
+  "browser_rendering_verified": false,
+  "notes": "Browser automation unavailable. These assertions test GUI HTTP controls, UART1, actual guest events and printer capture.",
+  "checks": [
+    {
+      "check": "Graphical scan control produces a committed ticket and real ESC/POS preview",
+      "passed": true
+    },
+    {
+      "check": "Invalid ticket control cannot print",
+      "passed": true
+    },
+    {
+      "check": "Partial UART scenario reaches actual firmware",
+      "passed": true
+    },
+    {
+      "check": "Paper-out control and operator retry preserve the operation",
+      "passed": true
+    },
+    {
+      "check": "Backend fault control fails closed and recovers",
+      "passed": true
+    },
+    {
+      "check": "GUI restart preserves NVS uncertainty; verified reconciliation never reprints",
+      "passed": true
+    }
+  ],
+  "final_state": "IDLE",
+  "final_operation": "ebd0b953fae63e3a8d8469bd1295c9c6",
+  "qemu_running": true,
+  "session_directory": "/home/mithil/qr-ticket-kiosk/results/gui-demo/20261030-182712"
+}
