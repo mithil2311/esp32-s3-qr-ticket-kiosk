@@ -1,0 +1,156 @@
+Activating ESP-IDF 5.5
+Setting IDF_PATH to '/home/mithil/esp/esp-idf-v5.5.1'.
+* Checking python version ... 3.14.4
+* Checking python dependencies ... OK
+* Deactivating the current ESP-IDF environment (if any) ... OK
+* Establishing a new ESP-IDF environment ... OK
+* Identifying shell ... bash
+* Detecting outdated tools in system ... OK - no outdated tools found
+* Shell completion ... Autocompletion code generated
+Adding SPI flash device
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x4 (SPI_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+I (14) boot: ESP-IDF v5.5.1 2nd stage bootloader
+I (14) boot: compile time Oct 30 2026 18:03:45
+I (14) boot: Multicore bootloader
+I (17) boot: chip revision: v0.0
+I (17) boot: efuse block revision: v0.0
+I (17) boot.esp32s3: Boot SPI Speed : 80MHz
+I (18) boot.esp32s3: SPI Mode       : SLOW READ
+I (18) boot.esp32s3: SPI Flash Size : 4MB
+I (19) boot: Enabling RNG early entropy source...
+I (21) boot: Partition Table:
+I (21) boot: ## Label            Usage          Type ST Offset   Length
+I (21) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (21) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (21) boot:  2 factory          factory app      00 00 00010000 00100000
+I (21) boot: End of partition table
+I (22) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=1c030h (114736) map
+I (31) esp_image: segment 1: paddr=0002c058 vaddr=3fc94700 size=02cb0h ( 11440) load
+I (32) esp_image: segment 2: paddr=0002ed10 vaddr=40374000 size=01308h (  4872) load
+I (33) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=6f1ach (455084) map
+I (64) esp_image: segment 4: paddr=0009f1d4 vaddr=40375308 size=0f2f0h ( 62192) load
+I (69) esp_image: segment 5: paddr=000ae4cc vaddr=50000000 size=00020h (    32) load
+I (70) boot: Loaded app from partition at offset 0x10000
+I (70) boot: Disabling RNG early entropy source...
+W (157) rtcinit: o_code calibration fail
+
+I (81) cpu_start: Multicore app
+I (91) cpu_start: Pro cpu start user code
+I (91) cpu_start: cpu freq: 240000000 Hz
+I (91) app_init: Application information:
+I (91) app_init: Project name:     qr_ticket_kiosk
+I (91) app_init: App version:      1
+I (91) app_init: Compile time:     Oct 30 2026 18:03:46
+I (91) app_init: ELF file SHA256:  67c13a8ed...
+I (91) app_init: ESP-IDF:          v5.5.1
+I (91) efuse_init: Min chip rev:     v0.0
+I (91) efuse_init: Max chip rev:     v0.99 
+I (91) efuse_init: Chip rev:         v0.0
+I (92) heap_init: Initializing. RAM available for dynamic allocation:
+I (92) heap_init: At 3FC98DC8 len 00050948 (322 KiB): RAM
+I (92) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (92) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (92) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (94) spi_flash: detected chip: gd
+I (94) spi_flash: flash io: dio
+I (94) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (94) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (96) main_task: Started on CPU0
+I (100) main_task: Calling app_main()
+I (141) esp_eth.netif.netif_glue: 52:54:00:12:34:56
+I (141) esp_eth.netif.netif_glue: ethernet attached to netif
+I (249) uart: queue free spaces: 20
+{"event":"state","data":{"from":"BOOT","state":"BOOT","reason":"","operation_id":"","t_us":370839,"queue_depth":0}}
+{"event":"state","data":{"from":"BOOT","state":"SELF_TEST","reason":"","operation_id":"","t_us":373761,"queue_depth":0}}
+{"event":"state","data":{"from":"SELF_TEST","state":"IDLE","reason":"","operation_id":"","t_us":374624,"queue_depth":0}}
+{"event":"resources","data":{"domain":"qemu_xtensa_firmware","t_us":374981,"heap_free_bytes":325044,"heap_min_bytes":321980,"controller_stack_hwm_bytes":9608,"scanner_stack_hwm_bytes":2860,"rtos_queue_depth":0,"controller_queue_depth":0,"rtos_queue_overflow":0,"scanner_corrupt":0,"failures":0}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":712195,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":715897,"queue_depth":0}}
+E (613) esp-tls: [sock=54] connect() error: Host is unreachable
+E (615) transport_base: Failed to open a new connection: 32772
+E (615) HTTP_CLIENT: Connection failed, sock < 0
+{"event":"state","data":{"from":"VALIDATING","state":"RETRY","reason":"BACKEND_RETRY","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":731878,"queue_depth":0}}
+{"event":"state","data":{"from":"RETRY","state":"VALIDATING","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":832491,"queue_depth":0}}
+E (722) esp-tls: [sock=54] connect() error: Host is unreachable
+E (723) transport_base: Failed to open a new connection: 32772
+E (723) HTTP_CLIENT: Connection failed, sock < 0
+{"event":"state","data":{"from":"VALIDATING","state":"RETRY","reason":"BACKEND_RETRY","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":838640,"queue_depth":0}}
+{"event":"state","data":{"from":"RETRY","state":"VALIDATING","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1043320,"queue_depth":0}}
+E (933) esp-tls: [sock=54] connect() error: Host is unreachable
+E (934) transport_base: Failed to open a new connection: 32772
+E (934) HTTP_CLIENT: Connection failed, sock < 0
+{"event":"state","data":{"from":"VALIDATING","state":"RETRY","reason":"BACKEND_RETRY","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1049652,"queue_depth":0}}
+I (1253) esp_netif_handlers: eth ip: 10.0.2.15, mask: 255.255.255.0, gw: 10.0.2.2
+{"event":"resources","data":{"domain":"qemu_xtensa_firmware","t_us":1379141,"heap_free_bytes":324932,"heap_min_bytes":321840,"controller_stack_hwm_bytes":8632,"scanner_stack_hwm_bytes":2860,"rtos_queue_depth":0,"controller_queue_depth":0,"rtos_queue_overflow":0,"scanner_corrupt":0,"failures":0}}
+{"event":"state","data":{"from":"RETRY","state":"VALIDATING","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1454289,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1484080,"queue_depth":0}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1493462,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINTING","state":"PRINT_CONFIRMED","reason":"SIMULATOR_JOB_CONFIRMED","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1590881,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINT_CONFIRMED","state":"COMMITTING","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1596219,"queue_depth":0}}
+{"event":"metric","data":{"operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","success":true,"reason":"COMMITTED","input_ms":0,"validation_ms":767.019,"retry_ms":709.554,"generation_ms":0.31,"printing_ms":92.594,"total_ms":902.487,"end_to_end_ms":902.535,"queue_peak":1}}
+{"event":"state","data":{"from":"COMMITTING","state":"SUCCESS","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1615361,"queue_depth":0}}
+{"event":"state","data":{"from":"SUCCESS","state":"IDLE","reason":"","operation_id":"1d05af10e4d9796aa7b9294c986c8a2a","t_us":1620215,"queue_depth":0}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"82c9c0a32508257a38c329221b7205ca","t_us":1660676,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"82c9c0a32508257a38c329221b7205ca","t_us":1665381,"queue_depth":0}}
+{"event":"metric","data":{"operation_id":"82c9c0a32508257a38c329221b7205ca","success":false,"reason":"INVALID_TICKET","input_ms":0,"validation_ms":14.385,"retry_ms":0,"generation_ms":0,"printing_ms":0,"total_ms":22.007,"end_to_end_ms":22.019,"queue_peak":1}}
+{"event":"state","data":{"from":"VALIDATING","state":"REJECTED","reason":"INVALID_TICKET","operation_id":"82c9c0a32508257a38c329221b7205ca","t_us":1678833,"queue_depth":0}}
+{"event":"state","data":{"from":"REJECTED","state":"IDLE","reason":"","operation_id":"82c9c0a32508257a38c329221b7205ca","t_us":1684171,"queue_depth":0}}
+{"event":"scan_drop","data":{"reason":"LOCAL_DUPLICATE"}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":1864746,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":1869582,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":1882759,"queue_depth":0}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":1892963,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINTING","state":"PRINT_CONFIRMED","reason":"SIMULATOR_JOB_CONFIRMED","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":1993069,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINT_CONFIRMED","state":"COMMITTING","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":1998186,"queue_depth":0}}
+{"event":"metric","data":{"operation_id":"eaa2f624fc283f7ede73651889fbfd65","success":true,"reason":"COMMITTED","input_ms":102.011,"validation_ms":14.822,"retry_ms":0,"generation_ms":0.065,"printing_ms":93.886,"total_ms":150.451,"end_to_end_ms":252.475,"queue_peak":1}}
+{"event":"state","data":{"from":"COMMITTING","state":"SUCCESS","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":2013684,"queue_depth":0}}
+{"event":"state","data":{"from":"SUCCESS","state":"IDLE","reason":"","operation_id":"eaa2f624fc283f7ede73651889fbfd65","t_us":2018195,"queue_depth":0}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2048701,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2053643,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RETRY","reason":"BACKEND_RETRY","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2062154,"queue_depth":0}}
+{"event":"state","data":{"from":"RETRY","state":"VALIDATING","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2162191,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RETRY","reason":"BACKEND_RETRY","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2171015,"queue_depth":0}}
+{"event":"state","data":{"from":"RETRY","state":"VALIDATING","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2371228,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2385247,"queue_depth":0}}
+{"event":"resources","data":{"domain":"qemu_xtensa_firmware","t_us":2385590,"heap_free_bytes":321024,"heap_min_bytes":312348,"controller_stack_hwm_bytes":8344,"scanner_stack_hwm_bytes":2860,"rtos_queue_depth":0,"controller_queue_depth":0,"rtos_queue_overflow":0,"scanner_corrupt":0,"failures":1}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2394634,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINTING","state":"PRINT_CONFIRMED","reason":"SIMULATOR_JOB_CONFIRMED","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2490398,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINT_CONFIRMED","state":"COMMITTING","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2495189,"queue_depth":0}}
+{"event":"metric","data":{"operation_id":"3ff92de08fe2cbaadf00efab43c3edba","success":true,"reason":"COMMITTED","input_ms":0,"validation_ms":332.603,"retry_ms":300.213,"generation_ms":0.062,"printing_ms":91.258,"total_ms":462.976,"end_to_end_ms":462.989,"queue_peak":1}}
+{"event":"state","data":{"from":"COMMITTING","state":"SUCCESS","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2509831,"queue_depth":0}}
+{"event":"state","data":{"from":"SUCCESS","state":"IDLE","reason":"","operation_id":"3ff92de08fe2cbaadf00efab43c3edba","t_us":2515163,"queue_depth":0}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2555642,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2560464,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2574525,"queue_depth":0}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2583137,"queue_depth":0}}
+{"event":"metric","data":{"operation_id":"df51e2d817e3e5345ea7e8e20143e59e","success":false,"reason":"PRINTER_NOT_STARTED","input_ms":0,"validation_ms":15.211,"retry_ms":0,"generation_ms":0.085,"printing_ms":5.318,"total_ms":40.195,"end_to_end_ms":40.207,"queue_peak":1}}
+{"event":"state","data":{"from":"PRINTING","state":"RECOVERY","reason":"PRINTER_NOT_STARTED","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2593084,"queue_depth":0}}
+{"event":"state","data":{"from":"RECOVERY","state":"VALIDATING","reason":"OPERATOR_RETRY","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2638221,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2646151,"queue_depth":0}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2655316,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINTING","state":"PRINT_CONFIRMED","reason":"SIMULATOR_JOB_CONFIRMED","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2753440,"queue_depth":0}}
+{"event":"state","data":{"from":"PRINT_CONFIRMED","state":"COMMITTING","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2758156,"queue_depth":0}}
+{"event":"state","data":{"from":"COMMITTING","state":"SUCCESS","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2772330,"queue_depth":0}}
+{"event":"state","data":{"from":"SUCCESS","state":"IDLE","reason":"","operation_id":"df51e2d817e3e5345ea7e8e20143e59e","t_us":2777174,"queue_depth":0}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2802637,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2807689,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2821649,"queue_depth":0}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2830481,"queue_depth":0}}
+{"event":"metric","data":{"operation_id":"96885675965d2c4406421e3f76e254b5","success":false,"reason":"PRINT_UNCERTAIN","input_ms":0,"validation_ms":15.854,"retry_ms":0,"generation_ms":0.062,"printing_ms":87.847,"total_ms":121.481,"end_to_end_ms":121.493,"queue_peak":1}}
+{"event":"state","data":{"from":"PRINTING","state":"UNCERTAIN","reason":"PRINT_UNCERTAIN_NO_REPRINT","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2923397,"queue_depth":0}}
+{"event":"state","data":{"from":"UNCERTAIN","state":"COMMITTING","reason":"OPERATOR_VERIFIED_PRINTED","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2967067,"queue_depth":0}}
+{"event":"state","data":{"from":"COMMITTING","state":"SUCCESS","reason":"","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2986053,"queue_depth":0}}
+{"event":"state","data":{"from":"SUCCESS","state":"IDLE","reason":"","operation_id":"96885675965d2c4406421e3f76e254b5","t_us":2991171,"queue_depth":0}}
+{"event":"state","data":{"from":"IDLE","state":"QR_RECEIVED","reason":"","operation_id":"cc4619db347a4b3b5fa60f4846c557e3","t_us":3031605,"queue_depth":0}}
+{"event":"state","data":{"from":"QR_RECEIVED","state":"VALIDATING","reason":"","operation_id":"cc4619db347a4b3b5fa60f4846c557e3","t_us":3036379,"queue_depth":0}}
+{"event":"state","data":{"from":"VALIDATING","state":"RESERVED","reason":"","operation_id":"cc4619db347a4b3b5fa60f4846c557e3","t_us":3049917,"queue_depth":0}}
+{"event":"state","data":{"from":"RESERVED","state":"PRINTING","reason":"","operation_id":"cc4619db347a4b3b5fa60f4846c557e3","t_us":3059117,"queue_depth":0}}
+qemu-system-xtensa: terminating on signal 15 from pid 87760 (.venv/bin/python)

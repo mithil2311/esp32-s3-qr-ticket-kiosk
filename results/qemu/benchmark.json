@@ -1,0 +1,66 @@
+{
+  "sample_count": 6,
+  "successes": 3,
+  "failures": 3,
+  "success_rate": 0.5,
+  "failure_rate": 0.5,
+  "quantile_method": "nearest_rank",
+  "latencies": {
+    "input_ms": {
+      "mean": 17.001833333333334,
+      "median": 0.0,
+      "p95": 102.011,
+      "p99": 102.011,
+      "maximum": 102.011
+    },
+    "validation_ms": {
+      "mean": 193.31566666666666,
+      "median": 15.532499999999999,
+      "p95": 767.019,
+      "p99": 767.019,
+      "maximum": 767.019
+    },
+    "retry_ms": {
+      "mean": 168.2945,
+      "median": 0.0,
+      "p95": 709.554,
+      "p99": 709.554,
+      "maximum": 709.554
+    },
+    "generation_ms": {
+      "mean": 0.09733333333333333,
+      "median": 0.0635,
+      "p95": 0.31,
+      "p99": 0.31,
+      "maximum": 0.31
+    },
+    "printing_ms": {
+      "mean": 61.817166666666665,
+      "median": 89.5525,
+      "p95": 93.886,
+      "p99": 93.886,
+      "maximum": 93.886
+    },
+    "total_ms": {
+      "mean": 283.26616666666666,
+      "median": 135.966,
+      "p95": 902.487,
+      "p99": 902.487,
+      "maximum": 902.487
+    },
+    "end_to_end_ms": {
+      "mean": 300.28633333333335,
+      "median": 186.98399999999998,
+      "p95": 902.535,
+      "p99": 902.535,
+      "maximum": 902.535
+    }
+  },
+  "active_transaction_equivalent_per_minute": 211.81491847773324,
+  "active_transaction_seconds": 1.699597,
+  "notes": [
+    "Mixed functional/fault scenarios; throughput is active-transaction equivalent, excludes idle and reboot time.",
+    "Emulator timing is not ESP32 hardware performance.",
+    "Uncertain and no-start attempts are counted as failures even if later operator reconciliation succeeds."
+  ]
+}

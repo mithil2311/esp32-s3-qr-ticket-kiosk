@@ -1,0 +1,34 @@
+Activating ESP-IDF 5.5
+Setting IDF_PATH to '/home/mithil/esp/esp-idf-v5.5.1'.
+* Checking python version ... 3.14.4
+* Checking python dependencies ... OK
+* Deactivating the current ESP-IDF environment (if any) ... OK
+* Establishing a new ESP-IDF environment ... OK
+* Identifying shell ... bash
+* Detecting outdated tools in system ... OK - no outdated tools found
+* Shell completion ... Autocompletion code generated
+Linux mithil-OptiPlex-Tower-7020 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+/usr/bin/git
+/usr/bin/gcc
+/usr/bin/g++
+/home/mithil/.espressif/python_env/idf5.5_py3.14_env/bin/python3
+/home/mithil/.espressif/tools/cmake/3.30.2/bin/cmake
+/home/mithil/.espressif/tools/ninja/1.12.1/ninja
+Python 3.14.4
+ESP-IDF v5.5.1
+QEMU emulator version 9.2.2 (esp_develop_9.2.2_20260417)
+Copyright (c) 2003-2024 Fabrice Bellard and the QEMU Project developers
+esp32s3              Espressif ESP32S3 machine

@@ -1,0 +1,33 @@
+{
+  "generated_utc": "2026-10-30T12:39:38.420764+00:00",
+  "host_tests_passed": 31,
+  "sanitizer_tests_passed": 31,
+  "qemu_checks_passed": 8,
+  "host_benchmark_samples": 25,
+  "toolchain": "ESP-IDF v5.5.1; Espressif QEMU 9.2.2 esp_develop_9.2.2_20260417",
+  "host_gcc": "15.2.0",
+  "artifacts": {
+    "build/kiosk_host": {
+      "bytes": 943808,
+      "sha256": "eb1ae5d3a578dec82ccded6bc20a1a6a44c6035048b3336443bc279f4eb43cbd"
+    },
+    "firmware/build/qr_ticket_kiosk.bin": {
+      "bytes": 648464,
+      "sha256": "f42193d01d1ce74a316a8449d121c2de90c41c2cde09209c9c04c70ce46ad167"
+    },
+    "firmware/build-hardware/qr_ticket_kiosk.bin": {
+      "bytes": 957280,
+      "sha256": "1a66f92e2580c9bbd470ed0ae6fd84724c2558a7f61c12055e6abfeab8581017"
+    },
+    "firmware/build/flash_image.bin": {
+      "bytes": 4194304,
+      "sha256": "a7eba2f945dae449b854d33703aa8da67935868545ae14d60eccd161fd624f1a"
+    }
+  },
+  "qemu_resource_minima": {
+    "controller_stack_hwm_bytes": 8344,
+    "scanner_stack_hwm_bytes": 2860,
+    "heap_free_bytes": 321024,
+    "heap_min_bytes": 312348
+  }
+}

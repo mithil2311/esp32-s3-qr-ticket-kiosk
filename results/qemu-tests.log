@@ -1,0 +1,9 @@
+PASS UART1 external TCP input and valid ticket
+PASS invalid ticket never prints
+PASS duplicate suppression
+PASS partial UART packets
+PASS backend 500 exponential retry
+PASS paper out recovery before print
+PASS cutter uncertainty and operator commit without reprint
+PASS NVS restart during printing has no automatic reprint
+8 QEMU runtime checks passed

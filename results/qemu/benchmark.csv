@@ -1,0 +1,7 @@
+operation_id,success,reason,input_ms,validation_ms,retry_ms,generation_ms,printing_ms,total_ms,end_to_end_ms,queue_peak,domain
+1d05af10e4d9796aa7b9294c986c8a2a,True,COMMITTED,0,767.019,709.554,0.31,92.594,902.487,902.535,1,qemu_xtensa_firmware
+82c9c0a32508257a38c329221b7205ca,False,INVALID_TICKET,0,14.385,0,0,0,22.007,22.019,1,qemu_xtensa_firmware
+eaa2f624fc283f7ede73651889fbfd65,True,COMMITTED,102.011,14.822,0,0.065,93.886,150.451,252.475,1,qemu_xtensa_firmware
+3ff92de08fe2cbaadf00efab43c3edba,True,COMMITTED,0,332.603,300.213,0.062,91.258,462.976,462.989,1,qemu_xtensa_firmware
+df51e2d817e3e5345ea7e8e20143e59e,False,PRINTER_NOT_STARTED,0,15.211,0,0.085,5.318,40.195,40.207,1,qemu_xtensa_firmware
+96885675965d2c4406421e3f76e254b5,False,PRINT_UNCERTAIN,0,15.854,0,0.062,87.847,121.481,121.493,1,qemu_xtensa_firmware

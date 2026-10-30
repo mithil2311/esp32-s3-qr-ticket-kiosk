@@ -1,0 +1,50 @@
+menu "QR ticket kiosk"
+config KIOSK_EMULATION
+ bool "QEMU OpenETH and virtual HTTP printer (simulation only)"
+ default y
+config KIOSK_CONSOLE_INJECTION
+ bool "Use UART0 console as firmware-level scanner injection adapter"
+ default n
+ help
+  Explicit fallback if UART1 chardev does not work. This is firmware input
+  injection over the console, not physical scanner UART emulation.
+config KIOSK_BACKEND_URL
+ string "Backend base URL"
+ default "http://10.0.2.2:9000"
+config KIOSK_PRINTER_URL
+ string "Virtual printer base URL (emulation only)"
+ default "http://10.0.2.2:9000"
+config KIOSK_DEVICE_ID
+ string "Unique kiosk ID (must not change while journal is pending)"
+ default "qemu-kiosk"
+config KIOSK_SCANNER_RX
+ int "ESP UART RX GPIO (scanner TX wired to GPIO18)"
+ range 0 48
+ default 18
+config KIOSK_SCANNER_TX
+ int "ESP UART TX GPIO (scanner RX wired to GPIO17)"
+ range 0 48
+ default 17
+config KIOSK_SCANNER_BAUD
+ int "Scanner baud rate"
+ range 1200 921600
+ default 115200
+config KIOSK_GREEN_GPIO
+ int "Green indicator GPIO"
+ range 0 48
+ default 4
+config KIOSK_RED_GPIO
+ int "Red indicator GPIO"
+ range 0 48
+ default 5
+config KIOSK_BUZZER_GPIO
+ int "Buzzer driver GPIO"
+ range 0 48
+ default 6
+config KIOSK_WIFI_SSID
+ string "Hardware Wi-Fi SSID"
+ default ""
+config KIOSK_WIFI_PASSWORD
+ string "Hardware Wi-Fi password"
+ default ""
+endmenu

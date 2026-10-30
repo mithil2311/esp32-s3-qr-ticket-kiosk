@@ -1,0 +1,206 @@
+{
+  "toolchain": "ESP-IDF v5.5.1; Espressif QEMU 9.2.2 esp_develop_9.2.2_20260417",
+  "uart": "UART1 external TCP chardev verified by guest transactions",
+  "network": "OpenETH emulation, not Wi-Fi",
+  "printer": "HTTP virtual printer, not USB/Bluetooth",
+  "tests": [
+    {
+      "test": "UART1 external TCP input and valid ticket",
+      "passed": true
+    },
+    {
+      "test": "invalid ticket never prints",
+      "passed": true
+    },
+    {
+      "test": "duplicate suppression",
+      "passed": true
+    },
+    {
+      "test": "partial UART packets",
+      "passed": true
+    },
+    {
+      "test": "backend 500 exponential retry",
+      "passed": true
+    },
+    {
+      "test": "paper out recovery before print",
+      "passed": true
+    },
+    {
+      "test": "cutter uncertainty and operator commit without reprint",
+      "passed": true
+    },
+    {
+      "test": "NVS restart during printing has no automatic reprint",
+      "passed": true
+    }
+  ],
+  "metrics": [
+    {
+      "operation_id": "1d05af10e4d9796aa7b9294c986c8a2a",
+      "success": true,
+      "reason": "COMMITTED",
+      "input_ms": 0,
+      "validation_ms": 767.019,
+      "retry_ms": 709.554,
+      "generation_ms": 0.31,
+      "printing_ms": 92.594,
+      "total_ms": 902.487,
+      "end_to_end_ms": 902.535,
+      "queue_peak": 1,
+      "domain": "qemu_xtensa_firmware"
+    },
+    {
+      "operation_id": "82c9c0a32508257a38c329221b7205ca",
+      "success": false,
+      "reason": "INVALID_TICKET",
+      "input_ms": 0,
+      "validation_ms": 14.385,
+      "retry_ms": 0,
+      "generation_ms": 0,
+      "printing_ms": 0,
+      "total_ms": 22.007,
+      "end_to_end_ms": 22.019,
+      "queue_peak": 1,
+      "domain": "qemu_xtensa_firmware"
+    },
+    {
+      "operation_id": "eaa2f624fc283f7ede73651889fbfd65",
+      "success": true,
+      "reason": "COMMITTED",
+      "input_ms": 102.011,
+      "validation_ms": 14.822,
+      "retry_ms": 0,
+      "generation_ms": 0.065,
+      "printing_ms": 93.886,
+      "total_ms": 150.451,
+      "end_to_end_ms": 252.475,
+      "queue_peak": 1,
+      "domain": "qemu_xtensa_firmware"
+    },
+    {
+      "operation_id": "3ff92de08fe2cbaadf00efab43c3edba",
+      "success": true,
+      "reason": "COMMITTED",
+      "input_ms": 0,
+      "validation_ms": 332.603,
+      "retry_ms": 300.213,
+      "generation_ms": 0.062,
+      "printing_ms": 91.258,
+      "total_ms": 462.976,
+      "end_to_end_ms": 462.989,
+      "queue_peak": 1,
+      "domain": "qemu_xtensa_firmware"
+    },
+    {
+      "operation_id": "df51e2d817e3e5345ea7e8e20143e59e",
+      "success": false,
+      "reason": "PRINTER_NOT_STARTED",
+      "input_ms": 0,
+      "validation_ms": 15.211,
+      "retry_ms": 0,
+      "generation_ms": 0.085,
+      "printing_ms": 5.318,
+      "total_ms": 40.195,
+      "end_to_end_ms": 40.207,
+      "queue_peak": 1,
+      "domain": "qemu_xtensa_firmware"
+    },
+    {
+      "operation_id": "96885675965d2c4406421e3f76e254b5",
+      "success": false,
+      "reason": "PRINT_UNCERTAIN",
+      "input_ms": 0,
+      "validation_ms": 15.854,
+      "retry_ms": 0,
+      "generation_ms": 0.062,
+      "printing_ms": 87.847,
+      "total_ms": 121.481,
+      "end_to_end_ms": 121.493,
+      "queue_peak": 1,
+      "domain": "qemu_xtensa_firmware"
+    }
+  ],
+  "resources": [
+    {
+      "domain": "qemu_xtensa_firmware",
+      "t_us": 374981,
+      "heap_free_bytes": 325044,
+      "heap_min_bytes": 321980,
+      "controller_stack_hwm_bytes": 9608,
+      "scanner_stack_hwm_bytes": 2860,
+      "rtos_queue_depth": 0,
+      "controller_queue_depth": 0,
+      "rtos_queue_overflow": 0,
+      "scanner_corrupt": 0,
+      "failures": 0
+    },
+    {
+      "domain": "qemu_xtensa_firmware",
+      "t_us": 1379141,
+      "heap_free_bytes": 324932,
+      "heap_min_bytes": 321840,
+      "controller_stack_hwm_bytes": 8632,
+      "scanner_stack_hwm_bytes": 2860,
+      "rtos_queue_depth": 0,
+      "controller_queue_depth": 0,
+      "rtos_queue_overflow": 0,
+      "scanner_corrupt": 0,
+      "failures": 0
+    },
+    {
+      "domain": "qemu_xtensa_firmware",
+      "t_us": 2385590,
+      "heap_free_bytes": 321024,
+      "heap_min_bytes": 312348,
+      "controller_stack_hwm_bytes": 8344,
+      "scanner_stack_hwm_bytes": 2860,
+      "rtos_queue_depth": 0,
+      "controller_queue_depth": 0,
+      "rtos_queue_overflow": 0,
+      "scanner_corrupt": 0,
+      "failures": 1
+    },
+    {
+      "domain": "qemu_xtensa_firmware",
+      "t_us": 367884,
+      "heap_free_bytes": 324920,
+      "heap_min_bytes": 321648,
+      "controller_stack_hwm_bytes": 9608,
+      "scanner_stack_hwm_bytes": 2860,
+      "rtos_queue_depth": 0,
+      "controller_queue_depth": 0,
+      "rtos_queue_overflow": 0,
+      "scanner_corrupt": 0,
+      "failures": 0
+    },
+    {
+      "domain": "qemu_xtensa_firmware",
+      "t_us": 1370621,
+      "heap_free_bytes": 324952,
+      "heap_min_bytes": 321648,
+      "controller_stack_hwm_bytes": 9608,
+      "scanner_stack_hwm_bytes": 2860,
+      "rtos_queue_depth": 0,
+      "controller_queue_depth": 0,
+      "rtos_queue_overflow": 0,
+      "scanner_corrupt": 0,
+      "failures": 0
+    },
+    {
+      "domain": "qemu_xtensa_firmware",
+      "t_us": 2375580,
+      "heap_free_bytes": 324952,
+      "heap_min_bytes": 321648,
+      "controller_stack_hwm_bytes": 9608,
+      "scanner_stack_hwm_bytes": 2860,
+      "rtos_queue_depth": 0,
+      "controller_queue_depth": 0,
+      "rtos_queue_overflow": 0,
+      "scanner_corrupt": 0,
+      "failures": 0
+    }
+  ]
+}
